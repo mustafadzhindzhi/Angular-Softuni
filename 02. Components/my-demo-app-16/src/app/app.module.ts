@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.components';
 import { NavigationComponent } from './navigation/navigation.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { PlaygroundComponent } from './playground/playground.component';
+import { TestComponentComponent } from './test-component/test-component.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,8 @@ import { UserListComponent } from './user-list/user-list.component';
     NavComponent,
     NavigationComponent,
     UserListComponent,
+    PlaygroundComponent,
+    TestComponentComponent,
   ],
   imports: [
     BrowserModule

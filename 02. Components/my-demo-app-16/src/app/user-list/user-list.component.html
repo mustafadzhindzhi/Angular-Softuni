@@ -1,1 +1,17 @@
-<p>user-list works!</p>
+<ul>
+  <li *ngFor="let user of users; index as i">
+    <span [class]="user?.status">
+        person with the name of {{user.name}} and {{user.age}} years old.
+    </span>
+    <!-- <span *ngIf="i % 2 === 0" style="background-color: green;">
+        person with the name of {{user.name}} and {{user.age}} years old.
+    </span> -->
+
+    <!-- <span *ngIf="i % 2 !== 0" style="background-color: pink;">
+        person with the name of {{user.name}} and {{user.age}} years old.
+    </span> -->
+  </li>
+</ul>
+
+<!-- <div *ngIf="isToggle">Toggle me!</div> -->
+
