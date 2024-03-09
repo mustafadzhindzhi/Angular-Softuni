@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-demo-app-16';
+  colorRedForPlayground = 'red';
+  colorGreenForPlayground = 'green';
+
+  onOutputFromChild(inputValue: string) {
+    console.log('from parent', inputValue);
+  }
 }

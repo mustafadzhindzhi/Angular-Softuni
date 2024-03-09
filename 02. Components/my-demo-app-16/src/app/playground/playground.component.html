@@ -18,7 +18,8 @@
 
  <input type="text" placeholder="username" #username>
  <button (click)="handleInput(username)">Handle Input</button>
+ <div [style.background-color]="colorValue">test 123 {{colorValue}}</div>
 
- <div>[class]="["first", "second"]"> Not a ngClass </div>
+ <!-- <div>[class]="["first", "second"]"> Not a ngClass </div>
  <div>[ngClass]="["first", "second"]"> Test ngClass </div>
- <div [attr.data-test123]="'test321'">This is testing of custom data attribute</div> <!--always data infront-->
+ <div [attr.data-test123]="'test321'">This is testing of custom data attribute</div> always data infront -->
