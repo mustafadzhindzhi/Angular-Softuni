@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
-import { User } from './types/user.js';
-
+import { UserService } from './user.service';
+import { User } from './types/user';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,28 +9,15 @@ import { User } from './types/user.js';
 
 export class AppComponent {
   title = 'my-playground';
-  users: User[] = [{ name: 'Pesho', age: 10 },
-  { name: 'Pesho', age: 20 },
-  { name: 'Pesho', age: 30 },
-  { name: 'Pesho', age: 40 }]
-
-  addUser(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
-    //
-    const user: User = {
-      name: inputName.value,
-      age: Number(inputAge.value)
-    }
-    this.users.push(user);
-    // this.users = [...this.users, user]    
-
-    inputName.value = '';
-    inputAge.value = ''
+  appUsers: User[] = [];
+  
+  constructor (private userService: UserService) {
+    this.appUsers = this.userService.users;
   }
 
-  // constructor(private cd: ChangeDetectorRef) {
-  //   setTimeout(() => {
-  //     this.title = 'Changed from Detector'
-  //     this.cd.detectChanges();
-  //   }, 3000);
-  // }
+  setUsers(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
+    //Validation of inputs?? Transformation of the input
+    this.userService.addUser(inputName, inputAge);
+    //Add Additional Functionality
+  }
 }
