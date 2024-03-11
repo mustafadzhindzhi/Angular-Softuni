@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { User } from '../types/user.js';
+import { JsonPlaceHolder, User } from '../types/user.js';
 
 @Component({
   selector: 'app-user-item',
@@ -8,5 +8,5 @@ import { User } from '../types/user.js';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserItemComponent {
-  @Input('user') user = {} as User;
+  @Input('user') user = {} as JsonPlaceHolder;
 }

@@ -20,7 +20,6 @@ interface Company {
     catchPhrase: string,
     bs: string
 }
-
 interface User2 {
     id: number, 
     name: string,
