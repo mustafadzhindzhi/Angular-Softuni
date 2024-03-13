@@ -1,0 +1,21 @@
+.btn{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    font-size: 22px;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: rgb(108, 120, 130);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.disabled {
+    background-color: grey;
+    pointer-events: none;
+}
