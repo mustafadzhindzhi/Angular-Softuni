@@ -1,0 +1,59 @@
+<div>{{ title }}</div>
+
+@for(task of tasks; track task.id) {
+<div>
+  @if (task.status === 'inProgress') {
+    <li style="border: 1px solid blue">{{ task.name }} - {{ task.status }}</li>
+  } @else if(task.status === 'todo') {
+    <li style="border: 1px solid red">{{ task.name }} - {{ task.status }}</li>
+  } @else {
+    <li style="border: 1px solid green">{{ task.name }} - {{ task.status }}</li>
+  }
+</div>
+
+<div>
+  @switch(task.status) { @case('todo') {
+    <li style="border: 1px solid red">{{ task.name }} - {{ task.status }}</li>
+  } @case('inProgress') {
+    <li style="border: 1px solid blue">{{ task.name }} - {{ task.status }}</li>
+  } @default {
+    <li style="border: 1px solid green">{{ task.name }} - {{ task.status }}</li>
+  } }
+</div>
+
+<br/>
+<br/>
+<hr/>
+<br/>
+<br/>
+
+<div>
+  @for(task of tasks; track task.id) {
+    <div>{{task.name}} - {{task.status}}</div>
+  } @empty {
+    <div>Sorry, this collection is empty</div>
+  }
+</div>
+
+<!-- <div>
+  @ngFor="let task of tasks" {
+    {{task.name}}
+  }
+</div> -->
+
+<hr>
+<app-home-test />
+
+<hr>
+<br>
+<br>
+
+<div>
+  @defer { Defer on view Port} 
+  @loading (1000ms) {Loading...} 
+  @placeholder () {}  
+  @error {Error hapened}
+</div>
+}
+
+<router-outlet />
