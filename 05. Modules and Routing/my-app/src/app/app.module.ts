@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { UserModule } from './user/user.module';
+import { TodoModule } from './todo/todo.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UserModule } from './user/user.module';
     AppRoutingModule,
     NoopAnimationsModule,
     CoreModule,
-    UserModule
+    UserModule,
+    TodoModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
