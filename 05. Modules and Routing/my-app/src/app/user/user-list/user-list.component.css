@@ -19,3 +19,13 @@
     background-color: grey;
     pointer-events: none;
 }
+
+.item {
+    margin: 10px 0;
+}
+
+.item:hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
