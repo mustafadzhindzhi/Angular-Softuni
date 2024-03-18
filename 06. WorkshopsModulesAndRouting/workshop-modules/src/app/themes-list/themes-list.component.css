@@ -1,5 +1,7 @@
 /* theme list item */
-
+main {
+    width: 90%;
+}
 .theme-container a {
     text-decoration: none;
     color: inherit;

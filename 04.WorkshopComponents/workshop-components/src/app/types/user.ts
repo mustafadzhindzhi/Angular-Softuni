@@ -1,6 +1,8 @@
+import { Post } from "./post.js";
+
 export interface User {
     themes: string[];
-    posts: string[];
+    posts: Post[];
     _id: string;
     tel: string;
     email: string;

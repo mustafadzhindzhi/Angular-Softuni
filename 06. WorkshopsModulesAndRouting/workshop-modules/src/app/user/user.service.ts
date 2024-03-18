@@ -26,6 +26,7 @@ export class UserService {
       firstName: 'Petko',
       email: 'petkoivanov@gmail.com',
       password: '123456',
+      id: '5fa64c1f2183ce1728ff3723',
       phoneNumber: '123-123-123'
     };
 
