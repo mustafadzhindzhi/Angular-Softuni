@@ -1,0 +1,16 @@
+<h2>{{user | json | uppercase}}</h2>
+<hr />
+<div>
+  {{user.list | reduce: sum : 0}}
+</div>
+
+<button (click)="addProperty()">Add Property</button>
+
+<div>Promise: {{p | async}}</div>
+
+<div>Clock: {{time$ | async | date : "hh:mm:ss"}}</div>
+
+<div><a routerLink="/">Home</a></div>
+<div><a routerLink="/lazy">Lazy</a></div>
+
+<router-outlet />
