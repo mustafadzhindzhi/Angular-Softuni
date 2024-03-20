@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AddThemeComponent } from './theme/add-theme/add-theme.component';
 import { ErrorComponent } from './error/error.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,9 @@ import { ErrorComponent } from './error/error.component';
     HttpClientModule,
     UserModule,
     ThemeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

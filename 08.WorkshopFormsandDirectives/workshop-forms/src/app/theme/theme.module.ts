@@ -7,7 +7,6 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { SharedModule } from '../shared/shared.module';
 import { MainComponent } from './main/main.component';
 
-
 @NgModule({
   declarations: [
     CurrentThemeComponent,
@@ -18,7 +17,7 @@ import { MainComponent } from './main/main.component';
   imports: [
     CommonModule,
     ThemeRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class ThemeModule { }
