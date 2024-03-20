@@ -1,7 +1,7 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
-import { Observable, map } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, Observable, ReplaySubject, Subject, map } from 'rxjs';
 
 
 platformBrowserDynamic().bootstrapModule(AppModule)
@@ -39,6 +39,63 @@ platformBrowserDynamic().bootstrapModule(AppModule)
     
   // })
 
-  //RXJS
-  
+  //SUBJECTS
+  // const subject$$ = new Subject();
+  // subject$$.subscribe((data) => console.log('A:', data)); //A
+
+  // subject$$.next(100); //A
+ 
+  // subject$$.subscribe((data) => console.log('B:', data)) //B
+  // subject$$.subscribe((data) => console.log('C:', data)) //C
+  // subject$$.next(200) //A, B, C
+
+  // setTimeout(() => {
+  //   subject$$.subscribe((data) => console.log('D:', data))//D
+  //   subject$$.next(300) //A, B, C, D
+  // }, 2000);
+
+  //BEHAVIOR SUBJECTS
+  // const bSubject$$ = new BehaviorSubject(100);
+  // bSubject$$.subscribe(data => console.log('Subscription 1:', data))
+
+  // setTimeout(() => {
+  //   bSubject$$.next(200)
+  //   bSubject$$.next(300)
+  //   bSubject$$.next(400)
+  //   bSubject$$.next(500)
+  //   bSubject$$.next(900)
+  //   bSubject$$.subscribe(data => console.log('Subscription 2:', data))
+  //   setTimeout(() => {
+  //     bSubject$$.next(300)
+  //     bSubject$$.subscribe(data => console.log('Subscription 3:', data))
+  //   }, 2000);
+  // }, 2000);
+
+  //REPLAY SUBJECTS
+  // const rSubject$$ = new ReplaySubject(5);
+  // rSubject$$.subscribe(data => console.log(`Tsveti: ${data} minute`))
+
+  // for (let i = 1; i <= 50; i++) {
+  //   rSubject$$.next(i);
+  // }
+
+  // console.log('----------------');
+
+  // rSubject$$.subscribe(data => console.log(`Desi: ${data} minute`))
+
+  // console.log('----------------');
+
+  // rSubject$$.subscribe(data => console.log(`Petyo: ${data} minute`))
+
+  //ASYNC SUBJECT
+  const asyncSubject$$ = new AsyncSubject();
+  asyncSubject$$.next(1);
+  asyncSubject$$.next(2);
+  asyncSubject$$.next(3);
+  asyncSubject$$.subscribe(data => console.log(`Subscribe1: ${data}`))
+
+  asyncSubject$$.next(5);
+  asyncSubject$$.subscribe(data => console.log(`Subscribe1: ${data}`))
+  asyncSubject$$.complete() //always takes the last value
+
 
