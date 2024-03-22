@@ -19,6 +19,7 @@ export interface UserForAuth {
   phoneNumber: string;
   password: string;
   id: string;
+  tel:string
 }
 
 export interface ProfileDetails {

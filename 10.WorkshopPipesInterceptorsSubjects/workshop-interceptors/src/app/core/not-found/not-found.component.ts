@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-error',
-  templateUrl: './error.component.html',
-  styleUrls: ['./error.component.css']
+  templateUrl: './not-found.component.html',
+  styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent {
 

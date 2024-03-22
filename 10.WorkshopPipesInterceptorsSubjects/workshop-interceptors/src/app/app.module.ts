@@ -10,7 +10,7 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AddThemeComponent } from './theme/add-theme/add-theme.component';
-import { NotFoundComponent } from './error/error.component';
+import { NotFoundComponent } from './core/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { appInterceptorProvider } from './app.interceptor';
 @NgModule({
@@ -19,7 +19,7 @@ import { appInterceptorProvider } from './app.interceptor';
     HomeComponent,
     AddThemeComponent,
     NotFoundComponent,
-    AuthenticateComponent
+    AuthenticateComponent,
   ],
   imports: [
     BrowserModule,
